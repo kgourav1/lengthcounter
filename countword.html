@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: pink;
+        }
+        .main{
+            position: absolute;
+            border: 2px solid black;
+            box-shadow:  5px 10px 5px rgb(10, 10, 10);
+            top: 50%;
+            left:50%;
+            transform: translate(-50%,-50%);
+            width: 300px;
+            height: 400px;
+            text-align: center;
+        }
+        .word{
+            margin: 40px 0px;
+            padding: 3px;
+            width: 200px;
+        }
+        .result{
+            background-color: green;
+            border: 2px solid green;
+            border-radius: 10px;
+            width: 100px;
+            height: 20px;
+            position: relative;
+            left:100px ;
+            bottom: 10px;
+            color: white;
+        }
+        .click{
+            background-color: blue;
+            padding: 5px;
+            outline: none;
+            border-radius: 10px;
+            top:20px ;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <h3>Type a word in the box</h3>
+        <input type="text" class="word" id="wrd" placeholder="Enter the word">
+        <div class="result" id="rslt"></div>
+        <button class="click" id="clk" onclick="wordlength()"> Click to calculate word length</button>
+    </div>
+    <script>
+        
+        var result=document.getElementById('rslt');
+        var press=document.getElementById("clk");
+        function wordlength(){
+            var text=document.getElementById('wrd').value;
+            
+           var length= text.length;
+            result.innerHTML=length;
+        }
+        
+    </script>
+</body>
+</html>
